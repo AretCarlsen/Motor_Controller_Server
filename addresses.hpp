@@ -1,0 +1,27 @@
+#define ADCServer_Output_AddressType MAP::AddressType__Topic
+#define ADCServer_Output_Address 5
+
+#define EncoderMonitor_Input_AddressType ADCServer_Output_AddressType
+#define EncoderMonitor_Input_Address ADCServer_Output_Address
+#define EncoderMonitor_Output_AddressType MAP::AddressType__Topic
+#define EncoderMonitor_Output_Address 6
+
+#define PIDEngine_Input_AddressType EncoderMonitor_Output_AddressType
+#define PIDEngine_Input_Address EncoderMonitor_Output_Address
+#define PIDEngine_Output_AddressType MAP::AddressType__Topic
+#define PIDEngine_Output_Address 7
+
+#define MotorDriver_Input_AddressType PIDEngine_Output_AddressType
+#define MotorDriver_Input_Address PIDEngine_Output_Address
+
+#define EchoServer_Input_AddressType MAP::AddressType__DeviceLocalStatic
+#define EchoServer_Input_Address 4
+
+#define KernelRouter_AddressType MAP::AddressType__DeviceLocalStatic
+#define KernelRouter_AddressValue 1
+#define PortRouter_AddressType MAP::AddressType__DeviceLocalStatic
+#define PortRouter_AddressValue 2
+
+#define LocalDevice_AddressType MAP::AddressType__LANLocal
+#define LocalDevice_AddressValue 9
+
