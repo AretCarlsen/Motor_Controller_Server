@@ -1,14 +1,6 @@
 
-class StateControlServer : public SimpleServer, public Process {
-public:
-
-// No outgoing packets
-  StateControlServer()
-  : SimpleServer(NULL)
-  { }
-
-Status::Status_t process(){
-  DEBUGprint_FORCE(".\n");
+class StateControlServer : public SimpleServer, public Process { public: Status::Status_t process(){
+  DEBUGprint_HEARTBEAT(".\n");
 
 // No packet?
   if(offsetPacket.packet == NULL)
@@ -47,6 +39,5 @@ Status::Status_t process(){
   }
 
   return Status::Status__Good;
-}
-} process_stateControlServer;
+} } process_stateControlServer;
 
