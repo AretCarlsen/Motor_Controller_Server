@@ -12,7 +12,7 @@ IPATH = $(IROOT) -I .
 
 ARCH = linux
 
-PROGRAM = server
+TARGET = server
 SRC     = server.cpp
 all: server
 
