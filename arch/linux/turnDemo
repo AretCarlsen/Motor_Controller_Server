@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo Straight for 10s.
+echo 8000 | ./setMotorPower > $1 2> $2
+sleep 10
+echo Rotate wheel right 2s.
+echo FFFF | ./setMotorPower >> $1 2>> $2
+sleep 2
+echo Keep wheel right 1s.
+echo 8000 | ./setMotorPower >> $1 2>> $2
+sleep 1 
+echo Rotate wheel left 2s, to straighten out.
+echo 0000 | ./setMotorPower >> $1 2>> $2
+sleep 2
+echo Straight indef.
+echo 8000 | ./setMotorPower >> $1 2>> $2
+

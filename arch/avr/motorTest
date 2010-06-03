@@ -1,0 +1,23 @@
+echo "15 8 24 fs -1.0 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs -0.75 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs -0.5 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs -0.3 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs -0.25 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs 0.0 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs 0.25 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs 0.3 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs 0.5 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs 0.75 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs 1.0 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
+sleep 2
+echo "15 8 24 fs 0.0 e" | ~/Projects/linux/motorControllerServer/sendPacket > /dev/ttyUSB0
