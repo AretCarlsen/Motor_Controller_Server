@@ -1,14 +1,14 @@
 
 // AnalogEncoder, EncoderMonitor, EncoderMonitorServer
-#include "../AnalogEncoder/EepromAnalogEncoder.hpp"
+#include <Motion/AnalogEncoder/EepromAnalogEncoder.hpp>
 // MotorDriver, MotorDriverServer
-#include "../MotorDriver/MotorDriverServer.hpp"
+#include <Motion/MotorDriver/MotorDriverServer.hpp>
 // PID engine
-#include "../PIDEngine/PIDEngine.hpp"
-#include "../PIDEngine/PIDEngineServer.hpp"
-#include "../PIDEngine/EepromPIDEngine.hpp"
+#include <Motion/PIDEngine/PIDEngine.hpp>
+#include <Motion/PIDEngine/PIDEngineServer.hpp>
+#include <Motion/PIDEngine/EepromPIDEngine.hpp>
 // Oscilloscope (ADCserver)
-#include "../ADCServer/ADCServer.hpp"
+#include <ATcommon/ADCServer/ADCServer.hpp>
 
 #include "addresses.hpp"
 
