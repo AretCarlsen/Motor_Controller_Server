@@ -1,6 +1,6 @@
 # Aret N Carlsen (aret@ncarlsen.net)
 #
-# Makefile for motor controller server
+# Makefile for Motor_Controller_Server, AVR architecture.
 #
 # Last mod: 2010-05
 

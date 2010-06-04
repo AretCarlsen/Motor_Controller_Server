@@ -1,3 +1,9 @@
+// Copyright (C) 2010, Aret N Carlsen (aretcarlsen@autonomoustools.com).
+// Motor Controller Server running under MapOS.
+// Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
+
+// main() implementation.
+
 
 // System timer
 //#define SYSTEM_TIMER_FREQUENCY 12019   // Hertz

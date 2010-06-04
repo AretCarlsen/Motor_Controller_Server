@@ -2,8 +2,8 @@
 // Motor Controller Server running under MapOS.
 // Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
 
+// Header aggregator.
 
-// Include aggregator.
 
 #include "servers.cpp"
 #include "StateControlServer.hpp"

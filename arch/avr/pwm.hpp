@@ -1,3 +1,10 @@
+// Copyright (C) 2010, Aret N Carlsen (aretcarlsen@autonomoustools.com).
+// Motor Controller Server running under MapOS.
+// Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
+
+// Servo PWM functions.
+
+
 #define TIMER1_TOP 49999
 #define TIMER1_SERVO_MIN 2500
 #define TIMER1_SERVO_NEUTRAL 3750

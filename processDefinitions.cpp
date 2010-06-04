@@ -2,7 +2,7 @@
 // Motor Controller Server running under MapOS.
 // Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
 
-// Routing graph.
+// Dynamic routing graph.
 
 
 // Echo server doesn't need to respond very quickly. 30ms period.

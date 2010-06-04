@@ -2,7 +2,7 @@
 // Motor Controller Server running under MapOS.
 // Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
 
-// Object instances.
+// Motor and encoder object instances.
 
 
 // Oscilloscope

@@ -8,6 +8,7 @@
 #include "../MapOS/StateControlServer.hpp"
 
 class LocalStateControlServer : public StateControlServer { public:
+// Save realtime state to nonvolatile store
   void saveState(){
     //DEBUGprint_EEP("SCS:proc: md_sv %d\n", (mode_save? 1 : 0));
     kernelRouter_eepromStore.saveState();
