@@ -1,4 +1,4 @@
 
-#include "../common/MotorControllerServer/templateInstantiations.cpp"
-#include "../common/MapOS/templateInstantiations.cpp"
+#include <ATcommon/arch/linux/linux.hpp>
+#include "../../templateInstantiations.cpp"
 

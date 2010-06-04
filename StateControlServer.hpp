@@ -1,3 +1,10 @@
+// Copyright (C) 2010, Aret N Carlsen (aretcarlsen@autonomoustools.com).
+// Motor Controller Server running under MapOS.
+// Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
+
+
+// Nonvolatile state control server.
+
 #include "../MapOS/StateControlServer.hpp"
 
 class LocalStateControlServer : public StateControlServer { public:

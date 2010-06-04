@@ -22,10 +22,10 @@ IPATH = $(IROOT) -I .
 ARCH = avr
 
 VPATH = .
-VPATH += $(PROJROOT)/avrlib:$(PROJROOT)/ATcommon/arch/$(ARCH):$(PROJROOT)/ATcommon/MemoryPool/arch/$(ARCH):$(PROJROOT)/ATcommon/arch/$(ARCH)/virtual
-VPATH += $(PROJROOT)/Upacket/MEP/arch/$(ARCH):$(PROJROOT)/Upacket/MAP/arch/$(ARCH):$(PROJROOT)/Upacket/PosixCRC32ChecksumEngine/arch/$(ARCH)
-VPATH += $(PROJROOT)/Upacket/Servers/arch/$(ARCH):$(PROJROOT)/Upacket/Routing/arch/$(ARCH)
-VPATH += $(PROJROOT)/Motion/MotorDriver/arch/$(ARCH):$(PROJROOT)/Motion/AnalogEncoder/arch/$(ARCH):$(PROJROOT)/ATcommon/ADCServer/arch/$(ARCH)
+VPATH += :$(PROJROOT)/avrlib:$(PROJROOT)/ATcommon/arch/$(ARCH):$(PROJROOT)/ATcommon/MemoryPool/arch/$(ARCH):$(PROJROOT)/ATcommon/arch/$(ARCH)/virtual
+VPATH += :$(PROJROOT)/Upacket/MEP/arch/$(ARCH):$(PROJROOT)/Upacket/MAP/arch/$(ARCH):$(PROJROOT)/Upacket/PosixCRC32ChecksumEngine/arch/$(ARCH)
+VPATH += :$(PROJROOT)/Upacket/Servers/arch/$(ARCH):$(PROJROOT)/Upacket/Routing/arch/$(ARCH)
+VPATH += :$(PROJROOT)/Motion/MotorDriver/arch/$(ARCH):$(PROJROOT)/Motion/AnalogEncoder/arch/$(ARCH):$(PROJROOT)/ATcommon/ADCServer/arch/$(ARCH)
 
 include $(PROJROOT)/ATcommon/arch/$(ARCH)/Makefile.inc
 

@@ -1,3 +1,9 @@
+// Copyright (C) 2010, Aret N Carlsen (aretcarlsen@autonomoustools.com).
+// Motor Controller Server running under MapOS.
+// Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
+
+// Routing graph.
+
 
 // Echo server doesn't need to respond very quickly. 30ms period.
 //  scheduler.add_process(&process_echoServer, 30000);

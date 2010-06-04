@@ -1,3 +1,9 @@
+// Copyright (C) 2010, Aret N Carlsen (aretcarlsen@autonomoustools.com).
+// Motor Controller Server running under MapOS.
+// Licensed under GPLv3 and later versions. See license.txt or <http://www.gnu.org/licenses/>.
+
+// Object instances.
+
 
 // Oscilloscope
   ADCServer process_adcServer(&adc_inputBuffers, &kernelSink, &packet_memoryPool, ADCServer_Output_AddressType, ADCServer_Output_Address);
