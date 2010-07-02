@@ -29,13 +29,25 @@
 #include <ATcommon/arch/avr/avr.hpp>
 #include <avrlib/rprintf.h>
 
+
+#include "../../main.hpp"
 // MapOS
+// Add'l packet sinks are introduced in this file.
+#define INITIAL_PACKET_SINK_COUNT (MOTORCONTROLLER_PACKET_SINK_COUNT + 2)
+// New processes defined in this file.
+#define INITIAL_PROCESS_DEFINITION_COUNT (MOTORCONTROLLER_PROCESS_DEFINITION_COUNT + 2)
 #include <MapOS/arch/avr/main.hpp>
-#include <MapOS/arch/avr/uart.hpp>
+// MapOS
 #include <MapOS/arch/avr/verify.hpp>
 
-// MotorControllerServer
-#include "../../main.hpp"
+// UART MAP/MEP I/O
+#define UART_OUTGOING_PACKET_BUFFER_CAPACITY 3
+#define UART_INPUT_BUFFER_CAPACITY 50
+#define UART_OUTPUT_BUFFER_CAPACITY 250
+#define UART_INITIAL_BAUD_RATE 115200
+#define UART_PACKET_SINK_INDEX 2
+#include <MapOS/arch/avr/UartComms.hpp>
+
 // Parameters
 #include "../../parameters.hpp"
 
@@ -45,14 +57,10 @@
 // ADC setup
 #include <MapOS/arch/avr/adc.hpp>
 
-// No add'l packet sinks are introduced in this file.
-#define INITIAL_PACKET_SINK_COUNT (MOTORCONTROLLER_PACKET_SINK_COUNT + 0)
-// New processes defined in this file.
-#define INITIAL_PROCESS_DEFINITION_COUNT (MOTORCONTROLLER_PROCESS_DEFINITION_COUNT + 1)
 
 inline void init(){
 // Global initializations
-  init_UART();
+  uartComms.init();
   init_PWM();
   init_ADC();
  
@@ -78,11 +86,11 @@ void main(){
   sleep_ms(50);
 
 #include <MapOS/arch/avr/main.cpp>
+#include <MapOS/arch/avr/UartComms.cpp>
 
 #include "../../main.cpp"
 
-  // Make sure outgoing data bus is triggered occasionally.
-  scheduler.add_process(&process_triggerOutgoing, 500);
+  scheduler.add_process(&uartComms, 500);
 
   DEBUGprint_RARE("Sched st\n");
 
