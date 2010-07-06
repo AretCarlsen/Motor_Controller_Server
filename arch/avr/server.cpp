@@ -38,7 +38,7 @@
 #define INITIAL_PROCESS_DEFINITION_COUNT (MOTORCONTROLLER_PROCESS_DEFINITION_COUNT + 2)
 #include <MapOS/arch/avr/main.hpp>
 // MapOS
-#include <MapOS/arch/avr/verify.hpp>
+#include <MapOS/arch/avr/startupDiagnostics.hpp>
 
 // UART MAP/MEP I/O
 #define UART_OUTGOING_PACKET_BUFFER_CAPACITY 3
@@ -73,8 +73,7 @@ inline void init(){
 // Wait for Eeprom to become available
   eeprom_busy_wait();
 
-  verify_eeprom();
-  verify_memPool();
+  startupDiagnostics();
 }
 
 void main(){

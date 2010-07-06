@@ -5,7 +5,7 @@
 
 // Nonvolatile state control server.
 
-#include "../MapOS/StateControlServer.hpp"
+#include <MapOS/StateControlServer.hpp>
 
 class LocalStateControlServer : public StateControlServer { public:
 // Save realtime state to nonvolatile store

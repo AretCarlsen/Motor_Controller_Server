@@ -33,6 +33,10 @@
 // Threading
 #include <pthread.h>
 
+// No add'l packet sinks are introduced in this file.
+#define INITIAL_PACKET_SINK_COUNT 10
+// New processes defined in this file.
+#define INITIAL_PROCESS_DEFINITION_COUNT 7
 #include <MapOS/arch/linux/main.hpp>
 #include "../../main.hpp"
 // Parameters
@@ -43,13 +47,6 @@
 #include <MapOS/arch/linux/threads.hpp>
 // DebugServoDriver
 #include "debugServoDriver.hpp"
-
-
-
-// No add'l packet sinks are introduced in this file.
-#define INITIAL_PACKET_SINK_COUNT (MOTORCONTROLLER_PACKET_SINK_COUNT + 0)
-// New processes defined in this file.
-#define INITIAL_PROCESS_DEFINITION_COUNT (MOTORCONTROLLER_PROCESS_DEFINITION_COUNT + 1)
 
 int main(int argc, char **argv){
 /* INIT */
@@ -66,9 +63,6 @@ int main(int argc, char **argv){
 #include <MapOS/arch/linux/main.cpp>
 
 #include "../../main.cpp"
-
-  // Make sure outgoing data bus is triggered occasionally.
-  scheduler.add_process(&process_triggerOutgoing, 500);
 
 // Main loop.
   DEBUGprint_RARE("Sched st\n");
